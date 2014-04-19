@@ -22,7 +22,7 @@ public class loginFilter implements Filter
 
 	public void init(FilterConfig filterConfig) throws ServletException
 	{
-		System.out.println("1111111111111111111111111111111111111111");
+		 
 		// TODO Auto-generated method stub
 		login_page = filterConfig.getInitParameter(LOGIN_URL);
 		 home_page = filterConfig.getInitParameter(HOME_URI) ;
@@ -35,11 +35,12 @@ public class loginFilter implements Filter
 	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
 	{
+		System.out.println("**正在执行登录过滤器**");
 		// TODO Auto-generated method stub
 		HttpServletResponse httpresponse = (HttpServletResponse)response;
 		HttpServletRequest httprequest = (HttpServletRequest)request;
 		HttpSession session = httprequest.getSession();
-		System.out.println("22222222222222222");
+		
 	}
 	
 	public void destroy()

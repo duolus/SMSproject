@@ -11,7 +11,7 @@ public class AdminDaoImpl implements AdminDao
 	@Override
 	public void add(Admin ad)
 	{
-		// TODO Auto-generated method stub
+		 
 		
 	}
 

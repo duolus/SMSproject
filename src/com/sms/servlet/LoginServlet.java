@@ -1,4 +1,4 @@
-package com.sms.web;
+package com.sms.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

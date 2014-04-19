@@ -2,7 +2,7 @@ SMSproject
 ==========
 项目目录
 
-SMSproject
+	 SMSproject
 		|--src
 		|	|--com.sms.dao           数据提供接口
 		|   |--com.sms.dao.impl  	 数据接口实现类（为业务逻辑提供数据）

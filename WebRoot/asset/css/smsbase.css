@@ -1,5 +1,30 @@
- 
-.navbar-default
+body
 {
-   background-color:#CCC !important;
+    padding-top: 70px; 
+    font-family: "雅黑";
 }
+
+.container
+{
+	width: 970px !important;
+}
+.pic_btn
+{
+	background-color: #0099FF;
+	width: 200px;
+	height: 200px;	
+}
+.page-header
+{
+	 
+}
+.bs-footer
+{
+	margin-top: 30px;
+}
+.navbar-bule
+{
+	background-color: #FFF;
+} 
+
+ 

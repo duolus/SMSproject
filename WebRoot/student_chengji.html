@@ -29,42 +29,36 @@
     <link rel="shortcut icon" href="assets/ico/favicon.png">
     <link rel="icon" href="assets/ico/favicon.ico">
     <style type="text/css">
-        a:link { text-decoration:none;}
+       td
+       {
+          text-align: center;
+       }
+       thead tr td
+       {
+         font-weight: bold;
+       }
     </style>
 </head>
 <body >
   <!--=========头部=======-->
-  <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation"  >
+  <div class="navbar navbar-default  navbar-fixed-top" role="navigation"  >
     <div class="container ">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">学生信息管理系统后台 </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">学生信息管理系统 </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">学生信息管理系统 </a>
       </div>
-      <ul class="nav navbar-nav">
-        <li class=" "><a href="#">首页</a></li>
-        
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户管理 <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">查询教工</a></li>
-            <li><a href="#">添加教工</a></li>
-            <li><a href="#">编辑教工</a></li>
-            <li><a href="#">权限控制</a></li>
-          </ul>
-        </li>
-        <li class="active"> <a href="#">审核管理 </a> </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">系统相关 <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">数据备份</a></li>
-          </ul>
-        </li>
-
-      </ul>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">上午好，管理员 </a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">上午好，Dropdown </a>
             <ul class="dropdown-menu">
+              <li><a href="#">修改密码</a></li>
+              <li class="divider"></li>
               <li><a href="#">退出系统</a></li>
             </ul>
           </li>
@@ -74,14 +68,43 @@
   </div>
   <!--导航栏 end--> 
 
-
   <!--主体部分 begin-->
   <div class="container ">
+    <!--翻页按钮-->
+    <ul class="pager">
+      <li class="next"><a href="#">返回</a></li>
+    </ul>
+    <p>学号：</p>  
+    <div class="panel panel-info">
+      <div class="panel-heading"><center>成绩</center></div>
+      <table class="table table-hover table-bordered"  >
+        <thead>
+          <tr>
+            <td>课程代码</td>
+            <td>课程名称</td>
+            <td>学分</td>
+            <td>先修课程</td>
+            <td colspan="4">分数</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SS1233</td>
+            <td>马克思</td>
+            <td>3.0</td>
+            <td>无</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+          </tr>
+        </tbody>
+             
+      </table>
+    </div>
+     
+    
 
-
-
-
-  <!--主体部分 end-->
   </div>
 
 

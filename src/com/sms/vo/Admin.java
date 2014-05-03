@@ -1,12 +1,14 @@
 package com.sms.vo;
 
+import java.sql.Timestamp;
+
 public class Admin
 {
 	int admin_id;
 	String admin_name;
 	String admin_pwd;
-	String login_ip;
-	String login_time;
+	String admin_login_ip;
+	Timestamp admin_login_time;
 	public int getAdmin_id()
 	{
 		return admin_id;
@@ -31,21 +33,21 @@ public class Admin
 	{
 		this.admin_pwd = admin_pwd;
 	}
-	public String getLogin_ip()
+	public String getAdmin_login_ip()
 	{
-		return login_ip;
+		return admin_login_ip;
 	}
-	public void setLogin_ip(String login_ip)
+	public void setAdmin_login_ip(String admin_login_ip)
 	{
-		this.login_ip = login_ip;
+		this.admin_login_ip = admin_login_ip;
 	}
-	public String getLogin_time()
+	public Timestamp getAdmin_login_time()
 	{
-		return login_time;
+		return admin_login_time;
 	}
-	public void setLogin_time(String login_time)
+	public void setAdmin_login_time(Timestamp admin_login_time)
 	{
-		this.login_time = login_time;
+		this.admin_login_time = admin_login_time;
 	}
 
 

@@ -1,5 +1,8 @@
 package com.sms.vo;
 
+import java.sql.Time;
+import java.sql.Timestamp;
+
 public class AdminLog
 {
 	int log_id;
@@ -7,7 +10,7 @@ public class AdminLog
 	String filename;
 	String method;
 	String query;
-	String ltime;
+	Timestamp ltime;
 	public int getLog_id()
 	{
 		return log_id;
@@ -48,14 +51,14 @@ public class AdminLog
 	{
 		this.query = query;
 	}
-	public String getLtime()
+	public Timestamp getLtime()
 	{
 		return ltime;
 	}
-	public void setLtime(String ltime)
+	public void setLtime(Timestamp ltime)
 	{
 		this.ltime = ltime;
 	}
+
 	
-	 
 }

@@ -23,8 +23,14 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/c3p0-0.9.5-pre8.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/c3p0-oracle-thin-extras-0.9.5-pre8.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mchange-commons-java-0.2.7.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections4-4.0.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-beanutils-1.9.1.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

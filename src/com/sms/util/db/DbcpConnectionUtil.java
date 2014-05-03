@@ -17,18 +17,17 @@ import org.apache.commons.dbcp.BasicDataSourceFactory;
 public class DbcpConnectionUtil
 {
 	private static DataSource myDataSource = null;
-	
-	
-	
+
 	public DbcpConnectionUtil()
 	{
 		InputStream in = null;
 		Properties properties = new Properties();
 		try
 		{
+			System.out.println("正在创建");
 			Class.forName("com.mysql.jdbc.Driver");
-			in =  ClassLoader.getSystemResourceAsStream("DBCPConfig.properties");
-		    //in = this.getClass().getClassLoader().getResourceAsStream("DBCPConfig.properties");
+			//in =  ClassLoader.getSystemResourceAsStream("DBCPConfig.properties");
+		    in = this.getClass().getClassLoader().getResourceAsStream("DBCPConfig.properties");
 			properties.load(in);
 			myDataSource =  BasicDataSourceFactory.createDataSource(properties);
 			 
@@ -85,7 +84,7 @@ public class DbcpConnectionUtil
 			table.add("ecs_attribute");
 			table.add("ecs_bonus_type");
           
-			for(int i=0 ;i<10;i++)
+			for(int i=0 ;i<4;i++)
 			{
 				Connection conn = DbcpConnectionUtil.openConnection();
 				stmt = conn.createStatement();
@@ -102,6 +101,6 @@ public class DbcpConnectionUtil
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 	}
 }

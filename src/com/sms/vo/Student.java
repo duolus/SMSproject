@@ -1,21 +1,31 @@
 package com.sms.vo;
 
+import java.sql.Timestamp;
+
+/**
+ * 
+* @ClassName: Student
+* @Description: 学生用户表对象
+* @author Duolus
+* @date 2014-4-28 上午1:06:11
+*
+ */
 public class Student
 {
 	int student_id;
 	String student_password;
 	String student_name;
-	String Major;
-	int Grade;
-	String Edu_Systme;
-	String Status;
-	int Create_by_id;
-	String Create_time;
-	String Create_ip;
-	String Login_time;
-	String Login_ip;
-	String Session;
-	String Mark;
+	String student_major;
+	int grade;
+	String edu_systme;
+	String student_status;
+	int student_create_id;
+	Timestamp student_create_time;
+	String student_create_ip;
+	Timestamp student_login_time;
+	String student_login_ip;
+	String student_session;
+	int role_id;
 	public int getStudent_id()
 	{
 		return student_id;
@@ -40,94 +50,95 @@ public class Student
 	{
 		this.student_name = student_name;
 	}
-	public String getMajor()
+	public String getStudent_major()
 	{
-		return Major;
+		return student_major;
 	}
-	public void setMajor(String major)
+	public void setStudent_major(String student_major)
 	{
-		Major = major;
+		this.student_major = student_major;
 	}
 	public int getGrade()
 	{
-		return Grade;
+		return grade;
 	}
 	public void setGrade(int grade)
 	{
-		Grade = grade;
+		this.grade = grade;
 	}
-	public String getEdu_Systme()
+	public String getEdu_systme()
 	{
-		return Edu_Systme;
+		return edu_systme;
 	}
-	public void setEdu_Systme(String edu_Systme)
+	public void setEdu_systme(String edu_systme)
 	{
-		Edu_Systme = edu_Systme;
+		this.edu_systme = edu_systme;
 	}
-	public String getStatus()
+	public String getStudent_status()
 	{
-		return Status;
+		return student_status;
 	}
-	public void setStatus(String status)
+	public void setStudent_status(String student_status)
 	{
-		Status = status;
+		this.student_status = student_status;
 	}
-	public int getCreate_by_id()
+	public int getStudent_create_id()
 	{
-		return Create_by_id;
+		return student_create_id;
 	}
-	public void setCreate_by_id(int create_by_id)
+	public void setStudent_create_id(int student_create_id)
 	{
-		Create_by_id = create_by_id;
+		this.student_create_id = student_create_id;
 	}
-	public String getCreate_time()
+	public Timestamp getStudent_create_time()
 	{
-		return Create_time;
+		return student_create_time;
 	}
-	public void setCreate_time(String create_time)
+	public void setStudent_create_time(Timestamp student_create_time)
 	{
-		Create_time = create_time;
+		this.student_create_time = student_create_time;
 	}
-	public String getCreate_ip()
+	public String getStudent_create_ip()
 	{
-		return Create_ip;
+		return student_create_ip;
 	}
-	public void setCreate_ip(String create_ip)
+	public void setStudent_create_ip(String student_create_ip)
 	{
-		Create_ip = create_ip;
+		this.student_create_ip = student_create_ip;
 	}
-	public String getLogin_time()
+	public Timestamp getStudent_login_time()
 	{
-		return Login_time;
+		return student_login_time;
 	}
-	public void setLogin_time(String login_time)
+	public void setStudent_login_time(Timestamp student_login_time)
 	{
-		Login_time = login_time;
+		this.student_login_time = student_login_time;
 	}
-	public String getLogin_ip()
+	public String getStudent_login_ip()
 	{
-		return Login_ip;
+		return student_login_ip;
 	}
-	public void setLogin_ip(String login_ip)
+	public void setStudent_login_ip(String student_login_ip)
 	{
-		Login_ip = login_ip;
+		this.student_login_ip = student_login_ip;
 	}
-	public String getSession()
+	public String getStudent_session()
 	{
-		return Session;
+		return student_session;
 	}
-	public void setSession(String session)
+	public void setStudent_session(String student_session)
 	{
-		Session = session;
+		this.student_session = student_session;
 	}
-	public String getMark()
+	public int getRole_id()
 	{
-		return Mark;
+		return role_id;
 	}
-	public void setMark(String mark)
+	public void setRole_id(int role_id)
 	{
-		Mark = mark;
+		this.role_id = role_id;
 	}
+	 
 
 
 }

@@ -97,7 +97,7 @@ public class ArchivesServiceImpl implements ArchivesService
 		{
 			return false;
 		}
-
+		System.out.println("性别"+request.getParameter("Sex")); 
 		int student_id = sdao.getId(number);
 		System.out.println("++++++++++" + Long.valueOf(request.getParameter("Id_number")));
 		si.setStudent_id(student_id);
@@ -148,33 +148,25 @@ public class ArchivesServiceImpl implements ArchivesService
 		String stuname = request.getParameter("Student_name");
 		String sex = request.getParameter("Sex");
 		String status = request.getParameter("Student_status");
-		
 		//实例化searchdata对象
-		 
 		Map<String,String> map = new HashMap<String,String>();
 		map.put("Student_id", Stuid);
 		map.put("Student_name", stuname);
 		map.put("Sex", sex);
 		map.put("Student_status", status);
-//System.out.println("start :"+start+"   end : "+end);
 		//获取searchdata值对象列
 		sdlist = sddao.list(start, end, map);
 		int results = sddao.getSize();
-//System.out.println(sdlist.size());
 		if(sdlist.isEmpty())
 		{
 			return null;
 		}
-		
 		//调用生成json函数
 		JsonUtil ju = new JsonUtil();
 		Map<String, Object> map2 = new HashMap<String, Object>();
 		map2.put("rows", sdlist);
 		map2.put("results", results);
 		String returnJson = ju.MapsToJSON(map2);
-		//respond打印json
-//System.out.println("Json :"+returnJson);
-	
 		return returnJson  ; 
 	}
 

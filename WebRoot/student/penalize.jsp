@@ -9,9 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <head>
   <title> 详情页</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-       <link href="./assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/bui-min.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/page-min.css" rel="stylesheet" type="text/css" />
+       <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" />
 
  </head>
  <body>     

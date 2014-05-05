@@ -27,11 +27,12 @@ public class LoginFilter implements Filter
 		// TODO Auto-generated method stub
 		login_page = filterConfig.getInitParameter(LOGIN_URL);
 		 home_page = filterConfig.getInitParameter(HOME_URI) ;
-		
+		 
 		 if(null == login_page || null == home_page)
 		 {
 			 throw new ServletException("没有指定登录页面或主页");
 		 }
+		 System.out.println("************过滤器  正在工作************");
 	}
 	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
@@ -60,15 +61,15 @@ public class LoginFilter implements Filter
 		 
 		
 		
-		System.out.println("***过滤器***");
-		System.out.println("目标访问地址 ："+request_uri+"?"+httprequest.getQueryString());
+		 
 		String staut = (String) (session.getAttribute("Role")==null?"未登录":session.getAttribute("Role"));
-		System.out.println("当前角色 :"+staut);
-		System.out.println("************");
+ 
+		
 		String islogin = (String) session.getAttribute("islogin");
 		//判断是否登录页面或者是网页进行资源调用，如果是则不需要进行过滤
 		if(uri.equals(login_page)||uri.equals("/tlogin.jsp")||uri.equals("/adlogin.jsp")||0==secondPath.indexOf("/assets")||uri.equals("/login"))
 		{
+			 
 			chain.doFilter(request, response);
 			return;
 		}
@@ -76,11 +77,11 @@ public class LoginFilter implements Filter
 		if("true".equals(islogin))
 		{
 			//判断是否有该操作权限
-
-			System.out.println(ctxPath+" ????"+request_uri);
+			System.out.println("目标访问地址 ："+request_uri+"?"+httprequest.getQueryString());
+			System.out.println("当前角色 :"+staut);
 			if(request_uri.equals(ctxPath+"/"))
 			{
-				httpresponse.sendRedirect(request_uri +"index/"+session.getAttribute("index")+".jsp");
+				httpresponse.sendRedirect(request_uri +session.getAttribute("index"));
 			}else
 			{
 				chain.doFilter(request, response);
@@ -93,12 +94,12 @@ public class LoginFilter implements Filter
 		{
 			//获取url中的参数和值
 			String strq = httprequest.getQueryString();
-			System.out.println("aaa"+strq);
+
 			if(null != strq)
 			{
 				request_uri = request_uri+"?"+strq;
 			} 
-			httprequest.setAttribute("origin_uri", request_uri);
+
 			RequestDispatcher rd = httprequest.getRequestDispatcher("/login");
 			rd.forward(httprequest, httpresponse);
 			return;
@@ -109,6 +110,6 @@ public class LoginFilter implements Filter
 	public void destroy()
 	{
 		// TODO Auto-generated method stub
-		
+		System.out.println("************过滤器  结束************");
 	}
 }

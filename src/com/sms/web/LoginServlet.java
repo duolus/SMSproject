@@ -78,20 +78,16 @@ public class LoginServlet extends HttpServlet
 		 
 		//获取session
 		HttpSession mysession = request.getSession();
-		//设置cookie
-//		Cookie cookie = new Cookie("cookiename","cookievalue");
-//		cookie.setMaxAge(3600);
-//		cookie.setPath("/");
-//		response.addCookie(cookie);
+		
 		//登录
 		if(null != action && "logon".equals(action))
 		{
-			new UserServiceImpl().dologin(request, response);	 
+			new UserServiceImpl().dologin(request, response);	 //执行登录
 		}
 		//注销
 		else if(null != action && "logout".equals(action))
 		{
-			new UserServiceImpl().dologout(request, response);
+			new UserServiceImpl().dologout(request, response);	//执行注销
 		}
 		else //未进行任何操作
 		{

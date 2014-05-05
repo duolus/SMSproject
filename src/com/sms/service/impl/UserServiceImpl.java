@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService
 		{
 			session.setAttribute("islogin", "true");// 设置session中islogin属性值为true
 			session.setAttribute("Role", "student");// 获取当前用户信息
-			session.setAttribute("index", "stuindex");
+			session.setAttribute("index", "/index/stuindex.jsp");
 			if (null == goal_uri)
 			{
 				goal_uri = "/index/stuindex.jsp";
@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService
 
 			session.setAttribute("islogin", "true");// 设置session中islogin属性值为true
 			session.setAttribute("Role", "teacher");// 获取当前用户信息
-			session.setAttribute("index", "tchindex");
+			session.setAttribute("index", "/index/tchindex.jsp");
 			// 获取
 			if (null == goal_uri)
 			{
@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService
 
 			session.setAttribute("islogin", "true");// 设置session中islogin属性值为true
 			session.setAttribute("Role", "admin");// 获取当前用户信息
-			session.setAttribute("index", "adindex");
+			session.setAttribute("index", "/index/adindex.jsp");
 			// 获取
 			if (null == goal_uri)
 			{

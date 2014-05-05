@@ -8,11 +8,6 @@ import com.sms.vo.AuthNode;
 public class AuthNodeDaoImpl implements AuthNodeDao
 {
 
-	public AuthNodeDaoImpl()
-	{
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public boolean add(AuthNode an)
 	{
@@ -43,6 +38,13 @@ public class AuthNodeDaoImpl implements AuthNodeDao
 
 	@Override
 	public AuthNode get(int id)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<AuthNode> listByid(int id)
 	{
 		// TODO Auto-generated method stub
 		return null;

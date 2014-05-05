@@ -61,18 +61,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 text:'首页',
                 homePage : 'index',
                 items:[
-                  {id : 'index',text : '欢迎页',href : 'student/index.html' ,closeable : false}
+                  {id : 'index',text : '欢迎页',href : 'other/welcome.jsp' ,closeable : false}
                 ]
               },{
                 text : '个人信息',
                 items : [
-                  {id : 'info',text : '个人信息查看',href : 'student/info.html'}
+                  {id : 'info',text : '个人信息查看',href : 'student/main?to=info'}
                 ]
               },{
                 text : '奖/惩情况',
                 items : [
-                  {id : 'reward',text : '奖励情况查看',href : 'student/reward.html'},
-                  {id : 'penalize',text : '惩罚情况查看',href : 'student/penalize.html'}
+                  {id : 'reward',text : '奖励情况查看',href : 'student/main?to=reward'},
+                  {id : 'penalize',text : '惩罚情况查看',href : 'student/main?to=penalize'}
                 ]
               },{
                 text : '我的成绩',
@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 text : '个人设置',
                 items : [
                   
-                  {id : 'changepw',text : '修改密码',href : 'student/change_pw.html'}
+                  {id : 'changepw',text : '修改密码',href : 'student/main?to=changepw'}
                 ]
               }]
           } 

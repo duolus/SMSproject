@@ -11,4 +11,5 @@ public interface AuthRoleDao
 	public List<AuthRole> list();//获取所有
 	public boolean delete(String[] del);//删除
 	public AuthRole get(int id);//按给定id获取信息
+	public int getId(String role);//按给定id获取信息
 }

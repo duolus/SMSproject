@@ -73,8 +73,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label class="control-label"><s>*</s>性别：</label>
           <div class="controls">
             <select name="Sex" data-rules="{required:true}">
-              <option value="0">男</option>
-              <option value="1">女</option>
+              <option value="1">男</option>
+              <option value="0">女</option>
             </select>
           </div>
         </div>
@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
       </div>
       <div class="row">
-      	<div class="control-group span12">
+        <div class="control-group span12">
           <label class="control-label"><s>*</s>民族</label>
           <div class="controls">
             <input name="Nation" type="text" class="control-text" data-rules="{required:true}">
@@ -103,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
       </div>
       <div class="row">
-      	<div class="control-group span12">
+        <div class="control-group span12">
           <label class="control-label"><s>*</s>籍贯</label>
           <div class="controls">
             <input name="Origo" type="text" class="control-text" data-rules="{required:true}">
@@ -112,7 +112,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          
       </div>
       <div class="row">
-      	<div class="control-group span12">
+        <div class="control-group span12">
           <label class="control-label"><s>*</s>政治面目</label>
           <div class="controls">
             <input name="Info_political" type="text" class="control-text" data-rules="{required:true}">
@@ -126,7 +126,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
       </div>
       <div class="row">
-      	<div class="control-group span12">
+        <div class="control-group span12">
           <label class="control-label"><s>*</s>来校前所在学校</label>
           <div class="controls">
             <input name="School" type="text" class="control-text" data-rules="{required:true}">
@@ -159,7 +159,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="row">
         <div class="span21 offset3 control-row-auto">
           <div id="resumegrid"></div>
-          <input type="hidden" name="eduation2">
+          <input type="hidden" name="resume">
         </div>
       </div>
 
@@ -169,9 +169,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="row">
         <div class="span21 offset3 control-row-auto">
           <div id="grid"></div>
-          <input type="hidden" name="eduation">
+          <input type="hidden" name="family">
         </div>
-        <p id="log"></p>
       </div>
       
       <div class="row">
@@ -182,6 +181,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       </div>
       <input type="hidden" name="do" value="addxueji">
     </form>
+
+
     <!--隐藏弹出表单 J_Form1-->
       <div id="content" class="hide">
       <form id="J_Form1" class="form-horizontal">
@@ -189,13 +190,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="control-group span8">
             <label class="control-label"><s>*</s>姓名</label>
             <div class="controls">
-              <input name="fname" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="family_name" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
           <div class="control-group span8">
             <label class="control-label"><s>*</s>年龄</label>
             <div class="controls">
-              <input name="fage" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="age" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
         </div>
@@ -203,13 +204,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <div class="control-group span8">
             <label class="control-label"><s>*</s>关系</label>
             <div class="controls">
-              <input name="frelation" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="relation" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
           <div class="control-group span8">
             <label class="control-label"><s>*</s>政治面目</label>
             <div class="controls">
-              <input name="fpolitical" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="family_political" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
         </div>
@@ -217,13 +218,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <div class="control-group span8">
             <label class="control-label"><s>*</s>工作单位</label>
             <div class="controls">
-              <input name="fwork" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="family_work" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
           <div class="control-group span8">
             <label class="control-label"><s>*</s>职务</label>
             <div class="controls">
-              <input name="fjob" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="family_job" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
         </div>
@@ -231,13 +232,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <div class="control-group span8">
             <label class="control-label"><s>*</s>工作单位电话</label>
             <div class="controls">
-              <input name="fofficetel" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="family_office_tel" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
           <div class="control-group span8">
             <label class="control-label"><s>*</s>联系电话</label>
             <div class="controls">
-              <input name="ftel" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="family_tel" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
         </div>
@@ -251,7 +252,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="control-group  ">
             <label class="control-label"><s>*</s>起止年月:</label>
             <div id="range" class="controls bui-form-group" data-rules="{dateRange : true}">
-              <input name="rsdate" class="calendar" type="text" style="width:90px;"><label>&nbsp;-&nbsp;</label><input name="redate" class="calendar" type="text" style="width:90px;">
+              <input name="resume_sdate" class="calendar" type="text" style="width:90px;"><label>&nbsp;-&nbsp;</label><input name="resume_edate" class="calendar" type="text" style="width:90px;">
             </div>
           </div>
         </div>
@@ -259,14 +260,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="control-group span15">
             <label class="control-label"><s>*</s>所在学校、年级或单位:</label>
             <div class="controls">
-              <input name="rwork" type="text" data-rules="{required:true}" class="input-normal control-text">
+              <input name="resume_dept" type="text" data-rules="{required:true}" class="input-normal control-text">
             </div>
           </div>
           <div class="row">
             <div class="control-group span15">
               <label class="control-label"><s>*</s>任何职务:</label>
               <div class="controls">
-                <input name="rjob" type="text" data-rules="{required:true}" class="input-normal control-text">
+                <input name="resume_job" type="text" data-rules="{required:true}" class="input-normal control-text">
               </div>
             </div>
           </div>
@@ -280,9 +281,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script type="text/javascript" src="./assets/js/bui-min.js"></script>
 
   <script type="text/javascript" src="./assets/js/config-min.js"></script>
+   <script type="text/javascript" src="../assets/js/prettify.js"></script>
   <script type="text/javascript">
     BUI.use('common/page');
   </script>
+  <script type="text/javascript">
+    $(function () {
+      prettyPrint();
+    });
+  </script> 
   <script type="text/javascript">
     BUI.use('bui/form',function (Form) {
       var form = new Form.HForm({
@@ -294,22 +301,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   BUI.use(['bui/grid','bui/data','bui/form'],function (Grid,Data,Form) {
 
     var columns = [
-            {title : '姓名',dataIndex :'fname'},
-            {title : '年龄',dataIndex :'fage' },
-            {title : '关系',dataIndex :'frelation'},
-            {title : '政治面目',dataIndex :'fpolitical'},
-            {title : '工 作 单 位',dataIndex :'fwork'},
-            {title : '职 务',dataIndex :'fjob'},
-            {title : '工作单位电话',dataIndex :'fofficetel'},
-            {title : '电话',dataIndex :'ftel'},
+            {title : '姓名',dataIndex :'family_name',width:80},
+            {title : '年龄',dataIndex :'age',width:40 },
+            {title : '关系',dataIndex :'relation',width:50},
+            {title : '政治面目',dataIndex :'family_political',width:70},
+            {title : '工 作 单 位',dataIndex :'family_work',width:200},
+            {title : '职 务',dataIndex :'family_job',width:70},
+            {title : '工作单位电话',dataIndex :'family_office_tel',width:100},
+            {title : '电话',dataIndex :'family_tel',width:100},
             {title : '操作',renderer : function(){
-              return '<span class="grid-command btn-edit">编辑</span>';
+              return '<span class="grid-command btn-edit">修改</span>';
             }}
           ],
       //默认的数据
       data = [
-        {id:'1',fname:'梁飞',fage:'45',frelation:'父子',fwork:'广州捷胜科技公司',fjob:'总经理',fofficetel:'8762323322',ftel:'13311122334'},
-        {id:'2',fname:'陈红',fage:'43',frelation:'母子',fwork:'广州捷胜科技公司',fjob:'副总经理',fofficetel:'8762323323',ftel:'13311344456'},
+        {id:'1',family_name:'梁飞',age:'45',relation:'父子',family_political:'群众',family_work:'广州捷胜科技公司',family_job:'总经理',family_office_tel:'13311122334',family_tel:'8762323322'},
+        {id:'2',family_name:'陈红',age:'43',relation:'母子',family_political:'群众',family_work:'广州捷胜科技公司',family_job:'副总经理',family_office_tel:'13311344456',family_tel:'8762323322'},
          
       ],
       store = new Data.Store({
@@ -359,10 +366,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       store.remove(selections);
     }
     var form = new Form.HForm({
-      srcNode : '#J_Form1'
+      srcNode : '#J_Form'
     });
     form.render();
-    var field = form.getField('eduation');
+    var field = form.getField('family');
     form.on('beforesubmit',function(){
       var records = store.getResult();
       field.set('value',BUI.JSON.stringify(records));
@@ -373,23 +380,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript">
   BUI.use(['bui/grid','bui/data','bui/form'],function (Grid,Data,Form) {
 
-    var columns2 = [{title : '起始年月',dataIndex :'rsdate' },
-            {title : '终止年月',dataIndex :'redate'},
-            {title : '所在学校、年级或单位',dataIndex :'rwork' },
-            {title : '任何职务',dataIndex :'rjob'},
+    var columns2 = [{title : '起始年月',dataIndex :'resume_sdate' },
+            {title : '终止年月',dataIndex :'resume_edate'},
+            {title : '所在学校、年级或单位',dataIndex :'resume_dept' },
+            {title : '任何职务',dataIndex :'resume_job'},
             
             {title : '操作',renderer : function(){
-              return '<span class="grid-command btn-edit2">编辑</span>';
+              return '<span class="grid-command btn-edit2">修改</span>';
             }}
           ],
       //默认的数据
-      data = [
-        {id:'1',rsdate:'2006-09-14',redate:'2007-06-14',rwork:'广州市第一中学',rjob:'学习委员'},
-        {id:'2',rsdate:'2007-09-14',redate:'2008-06-14',rwork:'广州市第一中学',rjob:'纪律委员'},
+      data2 = [
+        {id:'1',resume_sdate:'2006-09-14',resume_edate:'2007-06-14',resume_dept:'广州市第一中学',resume_job:'学习委员'},
+        {id:'2',resume_sdate:'2007-09-14',resume_edate:'2008-06-14',resume_dept:'广州市第一中学',resume_job:'纪律委员'},
          
       ],
       store2 = new Data.Store({
-        data:data
+        data:data2
       }),
       editing2 = new Grid.Plugins.DialogEditing({
         contentId : 'content2',
@@ -410,14 +417,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             btnCls : 'button button-small',
             text : '<i class="icon-plus"></i>添加',
             listeners : {
-              'click' : addFunction
+              'click' : addFunction2
             }
           },
           {
             btnCls : 'button button-small',
             text : '<i class="icon-remove"></i>删除',
             listeners : {
-              'click' : delFunction
+              'click' : delFunction2
             }
           }]
         }
@@ -425,33 +432,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       });
     grid2.render();
 
-    function addFunction(){
+    function addFunction2(){
       var newData2 = {school :''};
       editing2.add(newData2); //添加记录后，直接编辑
     }
 
-    function delFunction(){
+    function delFunction2(){
       var selections2 = grid2.getSelection();
       store2.remove(selections2);
     }
     var form2 = new Form.HForm({
-      srcNode : '#J_Form2'
+      srcNode : '#J_Form'
     });
     form2.render();
-    var field2 = form2.getField('eduation2');
+    var field2 = form2.getField('resume');
     form2.on('beforesubmit',function(){
       var records2 = store2.getResult();
       field2.set('value',BUI.JSON.stringify(records2));
     });
   });
 
-  var logEl = $('#log');
-$('#btnSave').on('click',function(){
-  if(editing.isValid()){ //判断是否通过验证，如果在表单中，那么阻止表单提交
-    var records = store.getResult();
-    logEl.text(BUI.JSON.stringify(records));
-  }
-});          
+         
 </script>
 <body>
 </html>  

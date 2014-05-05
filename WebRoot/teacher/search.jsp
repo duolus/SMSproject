@@ -99,37 +99,50 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           {title:'学生姓名',dataIndex:'student_name',width:70},
           {title:'性别',dataIndex:'sex',width:30,renderer:BUI.Grid.Format.enumRenderer(enumObj)}, 
           {title:'出生日期',dataIndex:'birth',width:80,renderer:BUI.Grid.Format.dateRenderer},
-          {title:'年级',dataIndex:'grade',width:60},
+          {title:'年级',dataIndex:'grade',width:50},
           {title:'系别',dataIndex:'info_department',width:100},
           {title:'专业',dataIndex:'student_major',width:100},
           {title:'籍贯',dataIndex:'origo',width:100},
-          {title:'民族',dataIndex:'nation',width:100},
-          {title:'应届生',dataIndex:'is_fresh',width:100,renderer:BUI.Grid.Format.enumRenderer(freshObj)},
-          {title:'学籍状态',dataIndex:'student_status',width:100,renderer:BUI.Grid.Format.enumRenderer(statusObj)},
+          {title:'民族',dataIndex:'nation',width:50},
+          {title:'应届生',dataIndex:'is_fresh',width:50,renderer:BUI.Grid.Format.enumRenderer(freshObj)},
+          {title:'学籍状态',dataIndex:'student_status',width:70,renderer:BUI.Grid.Format.enumRenderer(statusObj)},
 
-          {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
+          {title:'操作',dataIndex:'',width:240,renderer : function(value,obj){
             var editStr =  Search.createLink({ //链接使用 此方式
                 id : 'edit' + obj.id,
                 title : '编辑学生信息',
                 text : '编辑',
                 href : 'file/edit_xueji.html?id=' + obj.id
               }),
-            addStr =  Search.createLink({ //链接使用 此方式
+            rpStr =  Search.createLink({ //链接使用 此方式
                 id : 'add' + obj.id,
-                title : 'aa息',
+                title : '查看或编辑奖罚情况',
                 text : '奖罚情况',
                 href : 'file/rp.html'
               }),
-              delStr = '<span class="grid-command btn-del" title="删除学生信息">删除</span>';//页面操作不需要使用Search.createLink
-            return editStr +addStr+ delStr;
+            transactionStr =  Search.createLink({ //链接使用 此方式
+                id : 'add' + obj.id,
+                title : '查看或编辑异动情况',
+                text : '异动情况',
+                href : 'file/rp.html'
+              }),
+            leavingStr =  Search.createLink({ //链接使用 此方式
+                id : 'add' + obj.id,
+                title : '查看或编辑离校情况',
+                text : '离校情况',
+                href : 'file/rp.html'
+              }) 
+               
+            return editStr +rpStr+ transactionStr+leavingStr;
           }}
         ],
+       
       store = Search.createStore('<%=basePath%>file'),
       gridCfg = Search.createGridCfg(columns,{
         tbar : {
           items : [
              
-            {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+             
           ]
         },
         plugins : [BUI.Grid.Plugins.CheckSelection] // 插件形式引入多选表格
@@ -137,7 +150,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  
     var  search = new Search({
         store : store,
-        gridCfg : gridCfg
+        gridCfg : gridCfg,
+        autoSearch:false
       }),
       grid = search.get('grid');
     //删除操作

@@ -5,10 +5,9 @@ public class AuthNode
 	int node_id;
 	String node_name;
 	String title;
+	int role_id;
 	int node_status;
 	String node_remark;
-	int sort;
-	int node_parent_id;
 	int node_level;
 	public int getNode_id()
 	{
@@ -34,6 +33,14 @@ public class AuthNode
 	{
 		this.title = title;
 	}
+	public int getRole_id()
+	{
+		return role_id;
+	}
+	public void setRole_id(int role_id)
+	{
+		this.role_id = role_id;
+	}
 	public int getNode_status()
 	{
 		return node_status;
@@ -50,22 +57,6 @@ public class AuthNode
 	{
 		this.node_remark = node_remark;
 	}
-	public int getSort()
-	{
-		return sort;
-	}
-	public void setSort(int sort)
-	{
-		this.sort = sort;
-	}
-	public int getNode_parent_id()
-	{
-		return node_parent_id;
-	}
-	public void setNode_parent_id(int node_parent_id)
-	{
-		this.node_parent_id = node_parent_id;
-	}
 	public int getNode_level()
 	{
 		return node_level;
@@ -75,5 +66,5 @@ public class AuthNode
 		this.node_level = node_level;
 	}
 
-	
+
 }

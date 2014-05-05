@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.sms.service.impl.ArchivesServiceImpl;
 import com.sms.util.JsonUtil;
 
-public class StudentFileServlet extends HttpServlet
+public class ArchivesServlet extends HttpServlet
 {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public StudentFileServlet()
+	public ArchivesServlet()
 	{
 		super();
 	}

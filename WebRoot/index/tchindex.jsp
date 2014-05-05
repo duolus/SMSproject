@@ -62,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             menu:[{
                 text:'首页',
                 items:[
-                  {id:'index',text:'欢迎页',href:'index/index.html' ,closeable : false}, 
+                  {id:'index',text:'欢迎页',href:'other/welcome.jsp' ,closeable : false}, 
                 ]
               } ]
           },{

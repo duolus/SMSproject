@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
  
     <!-- Bootstrap -->
-    <link href="./assets/css/bootstrap2.min.css" rel="stylesheet" type="text/css" > 
+    <link href="../assets/css/bootstrap2.min.css" rel="stylesheet" type="text/css" > 
     <style type="text/css">
       label 
       {
@@ -55,11 +55,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         
       </form>
   </div>
-  <script type="text/javascript" src="./assets/js/jquery-1.8.1.min.js"></script>
-  <script type="text/javascript" src="./assets/js/bui-min.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bui-min.js"></script>
   <!-- 如果不使用页面内部跳转，则下面 script 标签不需要,同时不需要引入 common/page -->
-  <script type="text/javascript" src="./assets/js/config-min.js"></script>
-  <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../assets/js/config-min.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
  
   <script type="text/javascript">
     BUI.use('common/page'); //页面链接跳转

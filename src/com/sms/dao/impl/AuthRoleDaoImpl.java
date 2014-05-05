@@ -48,4 +48,11 @@ public class AuthRoleDaoImpl implements AuthRoleDao
 		return null;
 	}
 
+	@Override
+	public int getId(String role)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
